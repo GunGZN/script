@@ -1,5 +1,5 @@
 #!/bin/bash
-# สคริป​โดย​ AJ
+# สคริป​โดย​ SP-VPN
 #
 # ==================================================
 
@@ -15,13 +15,13 @@ ver=$VERSION_ID
 country=TH
 state=Thailand
 locality=Thailand
-organization=www.aj-net.com
-organizationalunit=www.aj-net.com
+organization=www.spnet-vpn.com
+organizationalunit=www.spnet-vpn.com
 commonname=jAvaNet
 email=sydjaja007@gmail.com
 
 # simple password minimal
-wget -O /etc/pam.d/common-password "https://github.com/wehoi/ws/raw/main/password"
+wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/Bankzza555666/script/main/password"
 chmod +x /etc/pam.d/common-password
 
 
@@ -93,7 +93,7 @@ wget -O /etc/nginx/conf.d/vps.conf "https://github.com/javakeisha/my/raw/main/vp
 
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "https://github.com/wehoi/ws/raw/main/badvpn-udpgw64"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/Bankzza555666/script/main/badvpn-udpgw64"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -199,7 +199,7 @@ sudo make install
 END
 
 #OpenVPN
-wget https://github.com/wehoi/ws/raw/main/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
+wget https://raw.githubusercontent.com/Bankzza555666/script/main/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 
 # install fail2ban
 apt -y install fail2ban
@@ -260,29 +260,28 @@ apt -y install dos2unix
 
 # download script
 cd /usr/bin
-wget -O menu "https://github.com/wehoi/ws/raw/main/menu.sh"
-wget -O new "https://github.com/wehoi/ws/raw/main/usernew.sh"
-wget -O del "https://github.com/wehoi/ws/raw/main/hapus.sh"
-wget -O user "https://github.com/wehoi/ws/raw/main/member.sh"
-wget -O deluser "https://github.com/wehoi/ws/raw/main/delete.sh"
-wget -O check "https://github.com/wehoi/ws/raw/main/cek.sh"
-wget -O restart "https://github.com/wehoi/ws/raw/main/restart.sh"
-wget -O speedtest "https://github.com/wehoi/ws/raw/main/speedtest_cli.py"
-wget -O info "https://github.com/wehoi/ws/raw/main/info.sh"
-wget -O ram "https://github.com/wehoi/ws/raw/main/ram.sh"
-wget -O renew "https://github.com/wehoi/ws/raw/main/renew.sh"
-wget -O autokill "https://github.com/wehoi/ws/raw/main/autokill.sh"
-wget -O multi "https://github.com/wehoi/ws/raw/main/ceklim.sh"
-wget -O tendang "https://github.com/wehoi/ws/raw/main/tendang.sh"
-wget -O clear-log "https://github.com/wehoi/ws/raw/main/clear-log.sh"
-wget -O port "https://github.com/wehoi/ws/raw/main/change.sh"
-wget -O port-ovpn "https://github.com/wehoi/ws/raw/main/port-ovpn.sh"
-wget -O port-ssl "https://github.com/wehoi/ws/raw/main/port-ssl.sh"
-wget -O port-tr "https://github.com/wehoi/ws/raw/main/port-tr.sh"
-wget -O port-squid "https://github.com/wehoi/ws/raw/main/port-squid.sh"
-wget -O port-ws "https://github.com/wehoi/ws/raw/main/port-ws.sh"
-wget -O port-vless "https://github.com/wehoi/ws/raw/main/port-vless.sh"
-wget -O web "https://github.com/wehoi/ws/raw/main/webmin.sh"
+wget -O menu "https://raw.githubusercontent.com/Bankzza555666/script/main/menu.sh"
+wget -O new "https://raw.githubusercontent.com/Bankzza555666/script/main/usernew.sh"
+wget -O del "https://raw.githubusercontent.com/Bankzza555666/script/main/hapus.sh"
+wget -O user "https://raw.githubusercontent.com/Bankzza555666/script/main/member.sh"
+wget -O deluser "https://raw.githubusercontent.com/Bankzza555666/script/main/delete.sh"
+wget -O check "https://raw.githubusercontent.com/Bankzza555666/script/main/cek.sh"
+wget -O restart "https://raw.githubusercontent.com/Bankzza555666/script/main/restart.sh"
+wget -O speedtest "https://raw.githubusercontent.com/Bankzza555666/script/main/speedtest_cli.py"
+wget -O info "https://raw.githubusercontent.com/Bankzza555666/script/main/info.sh"
+wget -O ram "https://raw.githubusercontent.com/Bankzza555666/script/main/ram.sh"
+wget -O renew "https://raw.githubusercontent.com/Bankzza555666/script/main/renew.sh"
+wget -O autokill "https://raw.githubusercontent.com/Bankzza555666/script/main/autokill.sh"
+wget -O multi "https://raw.githubusercontent.com/Bankzza555666/script/main/ceklim.sh"
+wget -O tendang "https://raw.githubusercontent.com/Bankzza555666/script/main/tendang.sh"
+wget -O clear-log "https://raw.githubusercontent.com/Bankzza555666/script/main/clear-log.sh"
+wget -O port "https://raw.githubusercontent.com/Bankzza555666/script/main/change.sh"
+wget -O port-ovpn "https://raw.githubusercontent.com/Bankzza555666/script/main/port-ssl.sh"
+wget -O port-tr "https://raw.githubusercontent.com/Bankzza555666/script/main/port-tr.sh"
+wget -O port-squid "https://raw.githubusercontent.com/Bankzza555666/script/main/port-squid.sh"
+wget -O port-ws "https://raw.githubusercontent.com/Bankzza555666/script/main/port-ws.sh"
+wget -O port-vless "https://raw.githubusercontent.com/Bankzza555666/script/main/port-vless.sh"
+wget -O web "https://raw.githubusercontent.com/Bankzza555666/script/main/webmin.sh"
 chmod +x menu
 chmod +x new
 chmod +x del
