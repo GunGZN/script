@@ -4,7 +4,7 @@ green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- icanhazip.com);
 data=( `cat /var/log/trojan.log | grep -w 'authenticated as' | awk '{print $7}' | sort | uniq`);
-echo "          สคริปโดยเอเจ"​;
+echo "          สคริปโดย SP VPN-TH"​;
 echo "-------------------------------";
 echo "-----=[ Trojan User Login ]=-----";
 echo "-------------------------------";
