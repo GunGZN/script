@@ -283,6 +283,7 @@ wget -O port-squid "https://raw.githubusercontent.com/Bankzza555666/script/main/
 wget -O port-ws "https://raw.githubusercontent.com/Bankzza555666/script/main/port-ws.sh"
 wget -O port-vless "https://raw.githubusercontent.com/Bankzza555666/script/main/port-vless.sh"
 wget -O web "https://raw.githubusercontent.com/Bankzza555666/script/main/webmin.sh"
+wget -O web "https://raw.githubusercontent.com/Bankzza555666/script/main/rootpass.sh"
 chmod +x menu
 chmod +x 1
 chmod +x 6
@@ -306,6 +307,7 @@ chmod +x port-squid
 chmod +x port-ws
 chmod +x port-vless
 chmod +x web
+chmod +x rootpass
 echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
 # remove unnecessary files
