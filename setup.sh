@@ -10,8 +10,8 @@ echo "กรุณาใส่โดเมน"
 read -p "Hostname / Domain: " host
 echo "IP=$host" >> /var/lib/premium-script/ipvps.conf
 echo "$host" >> /etc/v2ray/domain
-wget https://github.com/wehoi/ws/raw/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
-wget https://github.com/wehoi/ws/raw/main/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
+wget https://raw.githubusercontent.com/Bankzza555666/script/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/Bankzza555666/script/main/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
 rm -f /root/ssh-vpn.sh
 rm -f /root/ins-vt.sh
 history -c
@@ -20,7 +20,7 @@ clear
 echo " "
 echo " ติดตั้งสำเร็จแล้ว"
 echo " "
-echo "=================================-พรีเมี่ยมสคริป-===========================" | tee -a log-install.txt
+echo "============================-พรีเมี่ยมสคริป / SP-VPN-======================" | tee -a log-install.txt
 echo "" | tee -a log-install.txt
 echo "--------------------------------------------------------------------------------" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
@@ -50,7 +50,7 @@ echo "   - Installation Log --> /root/log-install.txt"  | tee -a log-install.txt
 echo "   - เจ้าของ                   : เอเจ" | tee -a log-install.txt
 echo "   - เบอร์โทร                  : 0934567688"  | tee -a log-install.txt
 echo ""
-echo "--------------------------สคริปโดยเอเจ ------------------------" | tee -a log-install.txt
+echo "--------------------------สคริปโดยSP-VPN ----------------------" | tee -a log-install.txt
 echo ""
 echo " อย่าลืมรีบูตด้วยเด้อ " 
 sleep 10
