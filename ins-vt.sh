@@ -505,6 +505,7 @@ wget -O 13 "https://raw.githubusercontent.com/Bankzza555666/script/main/renew-ws
 wget -O 21 "https://raw.githubusercontent.com/Bankzza555666/script/main/renew-vless.sh"
 wget -O 17 "https://raw.githubusercontent.com/Bankzza555666/script/main/renew-tr.sh"
 wget -O cert "https://raw.githubusercontent.com/Bankzza555666/script/main/cert.sh"
+wget -O cert "https://raw.githubusercontent.com/Bankzza555666/script/main/rootpass.sh"
 chmod +x 10
 chmod +x 18
 chmod +x 14
@@ -518,6 +519,7 @@ chmod +x 13
 chmod +x 21
 chmod +x 17
 chmod +x cert
+chmod +x rootpass
 cd
 rm -f ins-vt.sh
 mv /root/domain /etc/v2ray
