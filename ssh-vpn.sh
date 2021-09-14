@@ -283,7 +283,7 @@ wget -O port-squid "https://raw.githubusercontent.com/Bankzza555666/script/main/
 wget -O port-ws "https://raw.githubusercontent.com/Bankzza555666/script/main/port-ws.sh"
 wget -O port-vless "https://raw.githubusercontent.com/Bankzza555666/script/main/port-vless.sh"
 wget -O web "https://raw.githubusercontent.com/Bankzza555666/script/main/webmin.sh"
-wget -O web "https://raw.githubusercontent.com/Bankzza555666/script/main/rootpass.sh"
+wget -O rootpass "https://raw.githubusercontent.com/Bankzza555666/script/main/rootpass.sh"
 chmod +x menu
 chmod +x 1
 chmod +x 6
