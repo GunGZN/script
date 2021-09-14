@@ -260,51 +260,52 @@ apt -y install dos2unix
 
 # download script
 cd /usr/bin
-wget -O 1 "https://raw.githubusercontent.com/Bankzza555666/script/main/menu.sh"
-wget -O 2 "https://raw.githubusercontent.com/Bankzza555666/script/main/usernew.sh"
-wget -O 3 "https://raw.githubusercontent.com/Bankzza555666/script/main/hapus.sh"
-wget -O 4 "https://raw.githubusercontent.com/Bankzza555666/script/main/member.sh"
-wget -O 5 "https://raw.githubusercontent.com/Bankzza555666/script/main/delete.sh"
-wget -O 6 "https://raw.githubusercontent.com/Bankzza555666/script/main/cek.sh"
-wget -O 7 "https://raw.githubusercontent.com/Bankzza555666/script/main/restart.sh"
-wget -O 8 "https://raw.githubusercontent.com/Bankzza555666/script/main/speedtest_cli.py"
-wget -O 9 "https://raw.githubusercontent.com/Bankzza555666/script/main/info.sh"
-wget -O 10 "https://raw.githubusercontent.com/Bankzza555666/script/main/ram.sh"
-wget -O 11 "https://raw.githubusercontent.com/Bankzza555666/script/main/renew.sh"
-wget -O 12 "https://raw.githubusercontent.com/Bankzza555666/script/main/autokill.sh"
-wget -O 13 "https://raw.githubusercontent.com/Bankzza555666/script/main/ceklim.sh"
-wget -O 14 "https://raw.githubusercontent.com/Bankzza555666/script/main/tendang.sh"
-wget -O 15 "https://raw.githubusercontent.com/Bankzza555666/script/main/clear-log.sh"
-wget -O 16 "https://raw.githubusercontent.com/Bankzza555666/script/main/change.sh"
-wget -O 18 "https://raw.githubusercontent.com/Bankzza555666/script/main/port-ssl.sh"
-wget -O 19 "https://raw.githubusercontent.com/Bankzza555666/script/main/port-tr.sh"
-wget -O 20 "https://raw.githubusercontent.com/Bankzza555666/script/main/port-squid.sh"
-wget -O 21 "https://raw.githubusercontent.com/Bankzza555666/script/main/port-ws.sh"
-wget -O 22 "https://raw.githubusercontent.com/Bankzza555666/script/main/port-vless.sh"
-wget -O 23 "https://raw.githubusercontent.com/Bankzza555666/script/main/webmin.sh"
+wget -O menu "https://raw.githubusercontent.com/Bankzza555666/script/main/menu.sh"
+wget -O 1 "https://raw.githubusercontent.com/Bankzza555666/script/main/usernew.sh"
+wget -O 6 "https://raw.githubusercontent.com/Bankzza555666/script/main/hapus.sh"
+wget -O 5 "https://raw.githubusercontent.com/Bankzza555666/script/main//member.sh"
+wget -O 3 "https://raw.githubusercontent.com/Bankzza555666/script/main/delete.sh"
+wget -O 4 "https://raw.githubusercontent.com/Bankzza555666/script/main/cek.sh"
+wget -O 9 "https://raw.githubusercontent.com/Bankzza555666/script/main/restart.sh"
+wget -O speedtest "https://raw.githubusercontent.com/Bankzza555666/script/main/speedtest_cli.py"
+wget -O info "https://raw.githubusercontent.com/Bankzza555666/script/main/info.sh"
+wget -O ram "https://raw.githubusercontent.com/Bankzza555666/script/main/ram.sh"
+wget -O 2 "https://raw.githubusercontent.com/Bankzza555666/script/main/renew.sh"
+wget -O 7 "https://raw.githubusercontent.com/Bankzza555666/script/main/autokill.sh"
+wget -O 8 "https://raw.githubusercontent.com/Bankzza555666/script/main/ceklim.sh"
+wget -O tendang "https://raw.githubusercontent.com/Bankzza555666/script/main/tendang.sh"
+wget -O clear-log "https://raw.githubusercontent.com/Bankzza555666/script/main/clear-log.sh"
+wget -O port "https://raw.githubusercontent.com/Bankzza555666/script/main/change.sh"
+wget -O port-ovpn "https://raw.githubusercontent.com/Bankzza555666/script/main/port-ovpn.sh"
+wget -O port-ssl "https://raw.githubusercontent.com/Bankzza555666/script/main/port-ssl.sh"
+wget -O port-tr "https://raw.githubusercontent.com/Bankzza555666/script/main/port-tr.sh"
+wget -O port-squid "https://raw.githubusercontent.com/Bankzza555666/script/main/port-squid.sh"
+wget -O port-ws "https://raw.githubusercontent.com/Bankzza555666/script/main/port-ws.sh"
+wget -O port-vless "https://raw.githubusercontent.com/Bankzza555666/script/main/port-vless.sh"
+wget -O web "https://raw.githubusercontent.com/Bankzza555666/script/main/webmin.sh"
+chmod +x menu
 chmod +x 1
-chmod +x 2
+chmod +x 6
+chmod +x 5
 chmod +x 3
 chmod +x 4
-chmod +x 5
-chmod +x 6
-chmod +x 7
-chmod +x 8
 chmod +x 9
-chmod +x 10
-chmod +x 11
-chmod +x 12
-chmod +x 13
-chmod +x 14
-chmod +x 15
-chmod +x 16
-chmod +x 17
-chmod +x 18
-chmod +x 19
-chmod +x 20
-chmod +x 21
-chmod +x 22
-chmod +x 23
+chmod +x speedtest
+chmod +x info
+chmod +x 7
+chmod +x tendang
+chmod +x 8
+chmod +x ram
+chmod +x 2
+chmod +x clear-log
+chmod +x port
+chmod +x port-ovpn
+chmod +x port-ssl
+chmod +x port-tr
+chmod +x port-squid
+chmod +x port-ws
+chmod +x port-vless
+chmod +x web
 echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
 # remove unnecessary files
