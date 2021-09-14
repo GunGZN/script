@@ -492,31 +492,31 @@ systemctl enable trojan
 systemctl restart v2ray
 systemctl enable v2ray
 cd /usr/bin
-wget -O vr "https://raw.githubusercontent.com/Bankzza555666/script/main/add-ws.sh"
-wget -O vs "https://raw.githubusercontent.com/Bankzza555666/script/main/add-vless.sh"
-wget -O tj "https://raw.githubusercontent.com/Bankzza555666/script/main/add-tr.sh"
-wget -O vrd "https://raw.githubusercontent.com/Bankzza555666/script/main/del-ws.sh"
-wget -O vsd "https://raw.githubusercontent.com/Bankzza555666/script/main/del-vless.sh"
-wget -O tjd "https://raw.githubusercontent.com/Bankzza555666/script/main/del-tr.sh"
-wget -O vrc "https://raw.githubusercontent.com/Bankzza555666/script/main/cek-ws.sh"
-wget -O vsc "https://raw.githubusercontent.com/Bankzza555666/script/main/cek-vless.sh"
-wget -O tjc "https://raw.githubusercontent.com/Bankzza555666/script/main/cek-tr.sh"
-wget -O vrr "https://raw.githubusercontent.com/Bankzza555666/script/main/renew-ws.sh"
-wget -O vsr "https://raw.githubusercontent.com/Bankzza555666/script/main/renew-vless.sh"
-wget -O tjr "https://raw.githubusercontent.com/Bankzza555666/script/main/renew-tr.sh"
+wget -O 10 "https://raw.githubusercontent.com/Bankzza555666/script/main/add-ws.sh"
+wget -O 18 "https://raw.githubusercontent.com/Bankzza555666/script/main/add-vless.sh"
+wget -O 14 "https://raw.githubusercontent.com/Bankzza555666/script/main/add-tr.sh"
+wget -O 19 "https://raw.githubusercontent.com/Bankzza555666/script/main/del-ws.sh"
+wget -O 11 "https://raw.githubusercontent.com/Bankzza555666/script/main/del-vless.sh"
+wget -O 15 "https://raw.githubusercontent.com/Bankzza555666/script/main/del-tr.sh"
+wget -O 12 "https://raw.githubusercontent.com/Bankzza555666/script/main/cek-ws.sh"
+wget -O 20 "https://raw.githubusercontent.com/Bankzza555666/script/main/cek-vless.sh"
+wget -O 16 "https://raw.githubusercontent.com/Bankzza555666/script/main/cek-tr.sh"
+wget -O 13 "https://raw.githubusercontent.com/Bankzza555666/script/main/renew-ws.sh"
+wget -O 21 "https://raw.githubusercontent.com/Bankzza555666/script/main/renew-vless.sh"
+wget -O 17 "https://raw.githubusercontent.com/Bankzza555666/script/main/renew-tr.sh"
 wget -O cert "https://raw.githubusercontent.com/Bankzza555666/script/main/cert.sh"
-chmod +x vr
-chmod +x vs
-chmod +x tj
-chmod +x vrd
-chmod +x vsd
-chmod +x tjd
-chmod +x vrc
-chmod +x vsc
-chmod +x tjc
-chmod +x vrr
-chmod +x vsr
-chmod +x tjr
+chmod +x 10
+chmod +x 18
+chmod +x 14
+chmod +x 11
+chmod +x 19
+chmod +x 15
+chmod +x 12
+chmod +x 20
+chmod +x 16
+chmod +x 13
+chmod +x 21
+chmod +x 17
 chmod +x cert
 cd
 rm -f ins-vt.sh
