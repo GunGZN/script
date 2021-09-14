@@ -19,7 +19,7 @@ echo -e "**************************************"
 sleep 1
 clear
 case $pass in   
-                x)
+                1)
                 clear
                 passwd
                 ;;
