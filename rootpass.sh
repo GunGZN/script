@@ -13,12 +13,12 @@ echo -e "     [2]  รีบูต SSH (ต้องเลือก)"
 echo -e "     [x]  ออก"
 echo -e "**************************************"
 echo -e ""
-read -p "    กรุณาเลือก [1,2 หรือ x] :  "pass
+read -p "    กรุณาเลือก [1,2 หรือ x] :  "rootpass
 echo -e ""
 echo -e "**************************************"
 sleep 1
 clear
-case $pass in   
+case $rootpass in   
                 1)
                 clear
                 passwd
