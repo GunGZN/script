@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# By เอเจ
+# By SP-VPN TH
 # ==================================================
 
 # initialisasi var
@@ -15,7 +15,7 @@ apt install openvpn easy-rsa unzip -y
 apt install openssl iptables iptables-persistent -y
 mkdir -p /etc/openvpn/server/easy-rsa/
 cd /etc/openvpn/
-wget https://github.com/wehoi/ws/raw/main/vpn.zip
+wget https://raw.githubusercontent.com/Bankzza555666/script/main/vpn.zip
 unzip vpn.zip
 rm -f vpn.zip
 chown -R root:root /etc/openvpn/server/easy-rsa/
@@ -39,7 +39,7 @@ sed -i 's/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g' /etc/sysctl.conf
 
 # Buat config client TCP 1194
 cat > /etc/openvpn/TCP.ovpn <<-END
-FRIENDLY_NAME "AJNET"
+FRIENDLY_NAME "SPNET"
 client
 dev tun
 proto tcp
@@ -69,7 +69,7 @@ sed -i $MYIP2 /etc/openvpn/TCP.ovpn;
 
 # Buat config client UDP 2200
 cat > /etc/openvpn/UDP.ovpn <<-END
-FRIENDLY_NAME "AJNET"
+FRIENDLY_NAME "SPVPN"
 client
 dev tun
 proto udp
@@ -88,7 +88,7 @@ sed -i $MYIP2 /etc/openvpn/UDP.ovpn;
 
 # Buat config client SSL
 cat > /etc/openvpn/SSL.ovpn <<-END
-FRIENDLY_NAME "AJNET"
+FRIENDLY_NAME "SPVPN"
 client
 dev tun
 proto tcp
