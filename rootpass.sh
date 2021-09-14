@@ -17,16 +17,23 @@ read -p "    กรุณาเลือก [1,2 หรือ x] :  " rootpass
 echo -e ""
 echo -e "**************************************"
 sleep 1
-clear
 case $rootpass in   
                 1)
                 clear
+                echo -e "**************************************"
+                echo -e ""
+                echo -e "          กรุณาใส่รหัสผ่านที่ต้องการ "
+                echo -e ""
+                echo -e "**************************************"
                 passwd
+                sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+                /etc/init.d/ssh restart
                 ;;
                 2)
                 clear
                 sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
                 /etc/init.d/ssh restart
+        
                 echo -e ""
                 echo -e "**************************************"
                 echo -e ""
