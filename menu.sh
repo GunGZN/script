@@ -42,7 +42,7 @@ echo -e "* multi        : แสดงบัญชีที่เข้าใช
 echo -e "* restart      : รีสตาร์ท  Dropbear, Squid3, OpenVPN และ SSH"
 echo -e "************************************************************" | lolcat
 echo -e "                     VMESS"
-echo -e "* vr           : สร้างบัญชี VMESS"
+echo -e "* 1.           : สร้างบัญชี VMESS"
 echo -e "* vrd          : ลบบัญชี VMESS"
 echo -e "* vrc          : ตรวจสอบผู้ใช้งานบัญชี VMESS"             
 echo -e "* vrr          : ต่ออายุบัญชี VMESS"                     
