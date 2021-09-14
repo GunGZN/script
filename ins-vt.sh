@@ -16,7 +16,7 @@ date
 mkdir -p /etc/trojan/
 touch /etc/trojan/akun.conf
 # install v2ray
-wget https://github.com/wehoi/ws/raw/main/go.sh && chmod +x go.sh && ./go.sh
+wget https://raw.githubusercontent.com/Bankzza555666/script/main/go.sh && chmod +x go.sh && ./go.sh
 rm -f /root/go.sh
 bash -c "$(wget -O- https://raw.githubusercontent.com/trojan-gfw/trojan-quickstart/master/trojan-quickstart.sh)"
 mkdir /root/.acme.sh
@@ -492,19 +492,19 @@ systemctl enable trojan
 systemctl restart v2ray
 systemctl enable v2ray
 cd /usr/bin
-wget -O vr "https://github.com/wehoi/ws/raw/main/add-ws.sh"
-wget -O vs "https://github.com/wehoi/ws/raw/main/add-vless.sh"
-wget -O tj "https://github.com/wehoi/ws/raw/main/add-tr.sh"
-wget -O vrd "https://github.com/wehoi/ws/raw/main/del-ws.sh"
-wget -O vsd "https://github.com/wehoi/ws/raw/main/del-vless.sh"
-wget -O tjd "https://github.com/wehoi/ws/raw/main/del-tr.sh"
-wget -O vrc "https://github.com/wehoi/ws/raw/main/cek-ws.sh"
-wget -O vsc "https://github.com/wehoi/ws/raw/main/cek-vless.sh"
-wget -O tjc "https://github.com/wehoi/ws/raw/main/cek-tr.sh"
-wget -O vrr "https://github.com/wehoi/ws/raw/main/renew-ws.sh"
-wget -O vsr "https://github.com/wehoi/ws/raw/main/renew-vless.sh"
-wget -O tjr "https://github.com/wehoi/ws/raw/main/renew-tr.sh"
-wget -O cert "https://github.com/wehoi/ws/raw/main/cert.sh"
+wget -O vr "https://raw.githubusercontent.com/Bankzza555666/script/main/add-ws.sh"
+wget -O vs "https://raw.githubusercontent.com/Bankzza555666/script/main/add-vless.sh"
+wget -O tj "https://raw.githubusercontent.com/Bankzza555666/script/main/add-tr.sh"
+wget -O vrd "https://raw.githubusercontent.com/Bankzza555666/script/main/del-ws.sh"
+wget -O vsd "https://raw.githubusercontent.com/Bankzza555666/script/main/del-vless.sh"
+wget -O tjd "https://raw.githubusercontent.com/Bankzza555666/script/main/del-tr.sh"
+wget -O vrc "https://raw.githubusercontent.com/Bankzza555666/script/main/cek-ws.sh"
+wget -O vsc "https://raw.githubusercontent.com/Bankzza555666/script/main/cek-vless.sh"
+wget -O tjc "https://raw.githubusercontent.com/Bankzza555666/script/main/cek-tr.sh"
+wget -O vrr "https://raw.githubusercontent.com/Bankzza555666/script/main/renew-ws.sh"
+wget -O vsr "https://raw.githubusercontent.com/Bankzza555666/script/main/renew-vless.sh"
+wget -O tjr "https://raw.githubusercontent.com/Bankzza555666/script/main/renew-tr.sh"
+wget -O cert "https://raw.githubusercontent.com/Bankzza555666/script/main/cert.sh"
 chmod +x vr
 chmod +x vs
 chmod +x tj
