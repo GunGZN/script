@@ -105,11 +105,11 @@ END
 
 sed -i $MYIP2 /etc/openvpn/SSL.ovpn;
 
-cat > /etc/openvpn/client-key.pem <<-END
+cat > /etc/openvpn/ca.pem <<-END
 END
-echo '<ca>' >> /etc/openvpn/client-key.pem
-cat /etc/openvpn/server/ca.crt >> /etc/openvpn/client-key.pem
-echo '</ca>' >> /etc/openvpn/client-key.pem
+echo '<ca>' >> /etc/openvpn/ca.pem
+cat /etc/openvpn/server/ca.crt >> /etc/openvpn/ca.pem
+echo '</ca>' >> /etc/openvpn/ca.pem
 
 cd
 # pada tulisan xxx ganti dengan alamat ip address VPS anda 
