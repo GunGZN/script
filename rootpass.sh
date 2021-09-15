@@ -26,11 +26,10 @@ case $rootpass in
                 echo -e ""
                 echo -e "**************************************"
                 passwd
-                sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
-                /etc/init.d/ssh restart
+                rootpass
                 ;;
                 2)
-                clear
+                
                 sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
                 /etc/init.d/ssh restart
         
@@ -40,10 +39,10 @@ case $rootpass in
                 echo -e "          ดำเนินการสำเร็จ "
                 echo -e ""
                 echo -e "**************************************"
-                exit
+                menu
                 ;;
                 x)
                 clear
-                exit
+                menu
                 ;;
         esac
