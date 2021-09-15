@@ -39,4 +39,3 @@ case $changeport in
                 menu
                 ;;
         esac
-© 2021 GitHub, Inc.
