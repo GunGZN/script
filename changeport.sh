@@ -21,7 +21,7 @@ sleep 1
 case $changeport in   
                 
                 2)
-                sudo sed -i 's/listen       81 /listen       80/' /etc/nginx/conf.d/vps.conf
+                sudo sed -i 's/listen       81/listen       80/' /etc/nginx/conf.d/vps.conf
                 echo -e ""
                 echo -e "**************************************"
                 echo -e ""
