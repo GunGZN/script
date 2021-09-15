@@ -6,7 +6,7 @@ MYIP=$(wget -qO- icanhazip.com);
 clear
 echo -e ""
 echo -e "**************************************"
-echo -e "             สคริปโดย sp vpn-th"
+echo -e "             ทำตามขั้นตอน 1-3 "
 echo -e ""
 echo -e "     [1]  ตั้งรหัสสำหรับ ROOT (U16-18)"
 echo -e "     [2]  เปิดการอนุญาติ ROOT LOGIN (ต้องเลือก)"
