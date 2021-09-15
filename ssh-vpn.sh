@@ -284,6 +284,7 @@ wget -O port-ws "https://raw.githubusercontent.com/Bankzza555666/script/main/por
 wget -O port-vless "https://raw.githubusercontent.com/Bankzza555666/script/main/port-vless.sh"
 wget -O web "https://raw.githubusercontent.com/Bankzza555666/script/main/webmin.sh"
 wget -O rootpass "https://raw.githubusercontent.com/Bankzza555666/script/main/rootpass.sh"
+wget -O changeport "https://raw.githubusercontent.com/Bankzza555666/script/main/changeport.sh"
 chmod +x menu
 chmod +x 1
 chmod +x 6
@@ -308,6 +309,7 @@ chmod +x port-ws
 chmod +x port-vless
 chmod +x web
 chmod +x rootpass
+chmod +x changeport
 echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
 # remove unnecessary files
