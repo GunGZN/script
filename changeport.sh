@@ -28,7 +28,7 @@ case $changeport in
                 echo -e "          ดำเนินการสำเร็จโปรดรีบูต VPS "
                 echo -e ""
                 echo -e "**************************************"
-                menu
+                changeport
                 ;;
                 2)
                 clear
