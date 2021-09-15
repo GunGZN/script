@@ -26,6 +26,7 @@ case $rootpass in
                 echo -e ""
                 echo -e "**************************************"
                 passwd
+                sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
                 rootpass
                 ;;
                 2)
