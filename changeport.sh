@@ -13,13 +13,12 @@ echo -e "     [2]  รีบูต VPS (ต้องเลือก)"
 echo -e "     [x]  ออก"
 echo -e "**************************************"
 echo -e ""
-read -p "    กรุณาเลือก [1,2 หรือ x] :  " rootpass
+read -p "    กรุณาเลือก [1,2 หรือ x] :  " changeport
 echo -e ""
 echo -e "**************************************"
 sleep 1
-case $rootpass in   
+case $changeport in   
                 
-sftp://root:@116.204.181.182/
                 2)
                 sed -i 's/#listen       81 /listen       80/' /etc/nginx/conf.d/vps.conf
                 echo -e ""
