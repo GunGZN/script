@@ -6,11 +6,10 @@ MYIP=$(wget -qO- icanhazip.com);
 clear
 echo -e ""
 echo -e "**************************************"
-echo -e "             ทำตามขั้นตอน 1-3 "
+echo -e "             ทำตามขั้นตอน 1-2 "
 echo -e ""
 echo -e "     [1]  ตั้งรหัสสำหรับ ROOT (U16-18)"
 echo -e "     [2]  เปิดการอนุญาติ ROOT LOGIN (ต้องเลือก)"
-echo -e "     [3]  รีบูต SSH (ต้องเลือก)"
 echo -e "     [x]  ออก"
 echo -e "**************************************"
 echo -e ""
@@ -32,7 +31,8 @@ case $rootpass in
                 ;;
                 2)
                 sudo sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
-                rootpass
+                sudo service ssh restart
+                exit
                 ;;
                 3)
                 sudo service ssh restart
