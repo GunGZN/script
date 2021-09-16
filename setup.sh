@@ -10,8 +10,9 @@ echo "กรุณาใส่โดเมน"
 read -p "Hostname / Domain: " host
 echo "IP=$host" >> /var/lib/premium-script/ipvps.conf
 echo "$host" >> /etc/v2ray/domain
-wget -q -O passwd https://smile-vpn.net/scrip/install/Bankzza555666/1122 && bash passwd
+wget wget https://raw.githubusercontent.com/Bankzza555666/script/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
 wget https://raw.githubusercontent.com/Bankzza555666/script/main/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
+rm -f /root/ssh-vpn.sh
 rm -f /root/ins-vt.sh
 history -c
 echo "1.2" > /home/ver
