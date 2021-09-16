@@ -75,6 +75,7 @@ echo -e "* info         : แสดงข้อมูลระบบ"
 echo -e "* rootpass     : เปลี่ยนล๊อคอินเป็น ROOT"
 echo -e "* changeport   : เปลี่ยนพ็อตหลักเป็น 80"
 echo -e "* exit         : ออกจากระบบ"
+echo -e "* up           : อัพเดตสคริป"
 echo -e "************************************************************" | lolcat
 echo -e " ขอบคุณมากที่ใช้บริการของเรา"
 echo -e " Copyright ©SP-VPN"
