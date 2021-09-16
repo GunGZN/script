@@ -160,11 +160,6 @@ service squid restart -q > /dev/null 2>&1
 fi
 
 
-
-
-
-
-
 # setting vnstat
 apt -y install vnstat
 /etc/init.d/vnstat restart
