@@ -261,6 +261,7 @@ apt -y install dos2unix
 
 # download script
 cd /usr/bin
+wget -O m "https://raw.githubusercontent.com/Bankzza555666/script/main/menu.sh"
 wget -O menu "https://raw.githubusercontent.com/Bankzza555666/script/main/menu.sh"
 wget -O 1 "https://raw.githubusercontent.com/Bankzza555666/script/main/usernew.sh"
 wget -O 6 "https://raw.githubusercontent.com/Bankzza555666/script/main/hapus.sh"
@@ -288,6 +289,7 @@ wget -O rootpass "https://raw.githubusercontent.com/Bankzza555666/script/main/ro
 wget -O changeport "https://raw.githubusercontent.com/Bankzza555666/script/main/changeport.sh"
 wget -O up "https://raw.githubusercontent.com/Bankzza555666/script/main/up.sh"
 chmod +x up
+chmod +x m
 chmod +x menu
 chmod +x 1
 chmod +x 6
