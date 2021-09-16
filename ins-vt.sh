@@ -505,8 +505,6 @@ wget -O 13 "https://raw.githubusercontent.com/Bankzza555666/script/main/renew-ws
 wget -O 21 "https://raw.githubusercontent.com/Bankzza555666/script/main/renew-vless.sh"
 wget -O 17 "https://raw.githubusercontent.com/Bankzza555666/script/main/renew-tr.sh"
 wget -O cert "https://raw.githubusercontent.com/Bankzza555666/script/main/cert.sh"
-wget -O menu2 "https://raw.githubusercontent.com/Bankzza555666/script/main/menu.sh"
-chmod +x menu2
 chmod +x 10
 chmod +x 18
 chmod +x 14
