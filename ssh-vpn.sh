@@ -121,41 +121,11 @@ echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
 /etc/init.d/dropbear restart
 
-
-#install squid3
-apt-get install -qy squid > /dev/null 2>&1
-cp /etc/squid/squid.conf /etc/squid/squid.conf.orig
-cat > /etc/squid/squid.conf <<END
-http_port 8080
-acl localhost src 127.0.0.1/32 ::1
-acl to_localhost dst 127.0.0.0/8 0.0.0.0/32 ::1
-acl localnet src 10.0.0.0/8
-acl localnet src 172.16.0.0/12
-acl localnet src 192.168.0.0/16
-acl SSL_ports port 443
-acl Safe_ports port 80
-acl Safe_ports port 21
-acl Safe_ports port 443
-acl Safe_ports port 70
-acl Safe_ports port 210
-acl Safe_ports port 1025-65535
-acl Safe_ports port 280
-acl Safe_ports port 488
-acl Safe_ports port 591
-acl Safe_ports port 777
-acl CONNECT method CONNECT
-acl SSH dst $SERVER_IP-$SERVER_IP/255.255.255.255
-http_access allow SSH
-http_access allow localnet
-http_access allow localhost
-http_access deny all
-refresh_pattern ^ftp:           1440    20%     10080
-refresh_pattern ^gopher:        1440    0%      1440
-refresh_pattern -i (/cgi-bin/|\?) 0     0%      0
-refresh_pattern .               0       20%     4320
-END
-service squid restart -q > /dev/null 2>&1
-fi
+# install squid
+cd
+apt -y install squid3
+wget -O /etc/squid/squid.conf "https://github.com/javakeisha/my/raw/main/squid3.conf"
+sed -i $MYIP2 /etc/squid/squid.conf
 
 
 # setting vnstat
