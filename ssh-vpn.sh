@@ -286,7 +286,7 @@ wget -O port-vless "https://raw.githubusercontent.com/Bankzza555666/script/main/
 wget -O web "https://raw.githubusercontent.com/Bankzza555666/script/main/webmin.sh"
 wget -O rootpass "https://raw.githubusercontent.com/Bankzza555666/script/main/rootpass.sh"
 wget -O changeport "https://raw.githubusercontent.com/Bankzza555666/script/main/changeport.sh"
-wget -O changeport "https://raw.githubusercontent.com/Bankzza555666/script/main/up.sh"
+wget -O up "https://raw.githubusercontent.com/Bankzza555666/script/main/up.sh"
 chmod +x up
 chmod +x menu
 chmod +x 1
