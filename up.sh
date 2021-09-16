@@ -1,6 +1,8 @@
 # download script
 cd /usr/bin
 wget -O menu "https://raw.githubusercontent.com/Bankzza555666/script/main/menu.sh"
+wget -O m "https://raw.githubusercontent.com/Bankzza555666/script/main/menu.sh"
+
 wget -O 1 "https://raw.githubusercontent.com/Bankzza555666/script/main/usernew.sh"
 wget -O 6 "https://raw.githubusercontent.com/Bankzza555666/script/main/hapus.sh"
 wget -O 5 "https://raw.githubusercontent.com/Bankzza555666/script/main//member.sh"
@@ -28,6 +30,7 @@ wget -O changeport "https://raw.githubusercontent.com/Bankzza555666/script/main/
 wget -O up "https://raw.githubusercontent.com/Bankzza555666/script/main/up.sh"
 wget -O backup "https://raw.githubusercontent.com/Bankzza555666/script/main/backup.sh"
 chmod +x backup
+chmod +x m
 chmod +x up
 chmod +x menu
 chmod +x 1
