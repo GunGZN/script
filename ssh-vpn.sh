@@ -123,7 +123,6 @@ echo "/usr/sbin/nologin" >> /etc/shells
 
 
 #install squid3
-die "❯❯❯ apt-get install squid"
 apt-get install -qy squid > /dev/null 2>&1
 cp /etc/squid/squid.conf /etc/squid/squid.conf.orig
 cat > /etc/squid/squid.conf <<END
@@ -155,7 +154,6 @@ refresh_pattern ^gopher:        1440    0%      1440
 refresh_pattern -i (/cgi-bin/|\?) 0     0%      0
 refresh_pattern .               0       20%     4320
 END
-ok "❯❯❯ service squid restart"
 service squid restart -q > /dev/null 2>&1
 fi
 
