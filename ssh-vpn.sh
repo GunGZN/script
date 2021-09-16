@@ -6,7 +6,7 @@
 # initializing var
 export DEBIAN_FRONTEND=noninteractive
 MYIP=$(wget -qO- icanhazip.com);
-MYIP2="s/xxxxxxxxx/$MYIP/g";
+MYIP2="s/xxxxxxxxx-xxxxxxxxx/$MYIP-$MYIP/g";
 NET=$(ip -o $ANU -4 route show to default | awk '{print $5}');
 source /etc/os-release
 ver=$VERSION_ID
@@ -125,7 +125,7 @@ echo "/usr/sbin/nologin" >> /etc/shells
 cd
 apt -y install squid3
 wget -O /etc/squid3/squid.conf "https://raw.githubusercontent.com/Bankzza555666/script/main/squid3.conf"
-sed -i 's/xxxxxxxxx/$MYIP2/' /etc/squid3/squid.conf
+sed -i $MYIP2 /etc/squid3/squid.conf
 
 
 # setting vnstat
@@ -286,6 +286,8 @@ wget -O port-vless "https://raw.githubusercontent.com/Bankzza555666/script/main/
 wget -O web "https://raw.githubusercontent.com/Bankzza555666/script/main/webmin.sh"
 wget -O rootpass "https://raw.githubusercontent.com/Bankzza555666/script/main/rootpass.sh"
 wget -O changeport "https://raw.githubusercontent.com/Bankzza555666/script/main/changeport.sh"
+wget -O changeport "https://raw.githubusercontent.com/Bankzza555666/script/main/up.sh"
+chmod +x up
 chmod +x menu
 chmod +x 1
 chmod +x 6
