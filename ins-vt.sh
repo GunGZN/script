@@ -145,11 +145,11 @@ cat> /etc/v2ray/none.json << END
         ]
       },
       "streamSettings": {
-        "network": "ws",
+        "network": "tcp",
         "wsSettings": {
           "path": "/v2ray",
-          "headers": {
-            "Host": ""
+          "headers" "http": {
+            "Host": "www.opensignal.com"
           }
          },
         "quicSettings": {},
