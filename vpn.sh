@@ -6,6 +6,8 @@
 # initialisasi var
 export DEBIAN_FRONTEND=noninteractive
 OS=`uname -m`;
+domain=$(cat /etc/v2ray/domain)
+MYIP3="s/xxxxxxxxx/$domain/g";
 MYIP=$(wget -qO- icanhazip.com);
 MYIP2="s/xxxxxxxxx/$MYIP/g";
 ANU=$(ip -o $ANU -4 route show to default | awk '{print $5}');
@@ -36,6 +38,180 @@ systemctl enable --now openvpn-server@server-udp-2200
 # aktifkan ip4 forwarding
 echo 1 > /proc/sys/net/ipv4/ip_forward
 sed -i 's/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g' /etc/sysctl.conf
+
+# TRUENOPRO TCP 443
+cat > /etc/openvpn/true-nopro.ovpn <<-END
+client
+auth-user-pass
+dev tun
+proto tcp
+port 443
+connect-retry 1
+connect-timeout 120
+resolv-retry infinite
+route-method exe
+nobind
+ping 5
+ping-restart 30
+persist-key
+persist-tun
+persist-remote-ip
+mute-replay-warnings
+verb 3
+cipher none
+comp-lzo
+script-security 3
+remote SPNETVPN 999 udp
+remote xxxxxxxxx:443
+http-proxy xxxxxxxxx 8080
+http-proxy-option CUSTOM-HEADER Host www.opensignal.com
+http-proxy-option CUSTOM-HEADER X-Online-Host www.opensignal.com
+http-proxy-option CUSTOM-HEADER CONNECT HTTP/1.1
+http-proxy-option CUSTOM-HEADER Connection: Keep-Alive
+register-dns
+dhcp-option DNS 1.1.1.1
+dhcp-option DNS 1.0.0.1
+dhcp-option DOMAIN cloudflare.com
+redirect-gateway def1 bypass-dhcp
+END
+
+sed -i $MYIP3 /etc/openvpn/true-nopro.ovpn;
+
+# dtac-line TCP 443
+cat > /etc/openvpn/dtac-line-.ovpn <<-END
+auth-user-pass
+client
+dev tun
+port 443
+proto tcp
+remote xxxxxxxxx
+http-proxy xxxxxxxxx 8080
+http-proxy-option CUSTOM-HEADER ""
+http-proxy-option CUSTOM-HEADER "POST https://m.webtoons.com HTTP/1.0"
+connect-retry 1
+connect-timeout 120
+resolv-retry infinite
+route-method exe
+nobind
+ping 5
+ping-restart 30
+persist-key
+persist-tun
+persist-remote-ip
+mute-replay-warnings
+verb 3
+cipher none
+comp-lzo
+script-security 3
+END
+
+sed -i $MYIP3 /etc/openvpn/dtac-line.ovpn;
+
+
+# TRUEFBGAMING TCP 443
+cat > /etc/openvpn/true-fbgaming.ovpn <<-END
+client
+auth-user-pass
+dev tun
+port 443
+proto tcp
+remote "xxxxxxxxx "
+http-proxy xxxxxxxxx 8080
+http-proxy-option CUSTOM-HEADER Host connect.facebook.net
+connect-retry 1
+connect-timeout 120
+resolv-retry infinite
+route-method exe
+nobind
+ping 5
+ping-restart 30
+persist-key
+persist-tun
+persist-remote-ip
+mute-replay-warnings
+verb 3
+cipher none
+comp-lzo
+script-security 3
+END
+
+sed -i $MYIP3 /etc/openvpn/true-fbgaming.ovpn;
+
+
+# DTAC LAZADA TCP 443
+cat > /etc/openvpn/dtac-lazada.ovpn <<-END
+auth-user-pass
+client
+dev tun
+port 443
+proto tcp
+remote xxxxxxxxx:443@www.lazada.co.th
+http-proxy xxxxxxxxx 8080
+
+connect-retry 1
+connect-timeout 120
+resolv-retry infinite
+route-method exe
+nobind
+ping 5
+ping-restart 30
+persist-key
+persist-tun
+persist-remote-ip
+mute-replay-warnings
+verb 3
+cipher none
+comp-lzo
+script-security 3
+END
+
+sed -i $MYIP3 /etc/openvpn/dtac-lazada.ovpn;
+
+
+# AIS AISPALY TCP 443
+cat > /etc/openvpn/ais_aispay.ovpn <<-END
+auth-user-pass
+client
+dev tun
+port 443
+proto tcp
+remote "xxxxxxxxx:443@ www.speedtest.net"
+http-proxy xxxxxxxxx 8080
+http-proxy-option CUSTOM-HEADER "Keep-Connection:KeepAlive"
+dhcp-option DNS 1.1.1.1
+dhcp-option DNS 1.0.0.1
+dhcp-option DNS 8.8.8.8 
+dhcp-option DNS 1.1.1.1 
+dhcp-option DNS 4.2.2.2 
+dhcp-option DNS 4.2.2.1 
+dhcp-option DNS 8.8.4.4
+dhcp-option DNS 114.114.114.114
+dhcp-option DOMAIN blinkt.de
+dhcp-option DOMAIN localhost
+dhcp-option DOMAIN www.opendns.com
+dhcp-option DOMAIN www.google.com
+dhcp-option DOMAIN docs.microsoft.com
+dhcp-option DOMAIN www.opensignal.com
+connect-retry 1
+connect-timeout 120
+resolv-retry infinite
+route-method exe
+nobind
+ping 5
+ping-restart 30
+persist-key
+persist-tun
+persist-remote-ip
+mute-replay-warnings
+verb 3
+cipher none
+comp-lzo
+script-security 3
+END
+
+sed -i $MYIP3 /etc/openvpn/ais_aispay.ovpn;
+
+
 
 # Buat config client TCP 1194
 cat > /etc/openvpn/TCP.ovpn <<-END
