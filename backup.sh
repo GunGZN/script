@@ -45,9 +45,9 @@ read -p "    * ใส่รหัสผ่าน ➡️  " dns3
 read -p "    * ยืนยันการคืนค่าผู้ใช้ $dns2 หรือไม่ Y/n : " confirm
 if [[ y = $confirm || Y = $confirm ]]; then
 cd /
-wget -q "http://$dns2/dns3.tar"
+wget -q "http://$dns2/$dns3.tar"
 if [ -e '/$dns3.tar' ]; then
-tar xf dns3.tar
+tar xf $dns3.tar
 rm $dns3.tar 
 clear
 echo "    ╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮"
