@@ -46,7 +46,7 @@ cd /
 wget -q "$ipb/$dns2.tar"
 if [ -e '/$dns2.tar' ]; then
 tar xf $dns2.tar
-rm $dns3.tar 
+rm $dns2.tar 
 clear
 echo "    ╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮"
 echo "    ┣ คืนค่าผู้ใช้ของไอพี $dns2 เสร็จเรียบร้อย "
