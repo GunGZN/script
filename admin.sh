@@ -42,10 +42,10 @@ read -p "    * ใส่ชื่อเซิฟหรือชื่อไฟ�
 read -p "    * ยืนยันการคืนค่าผู้ใช้ $dns2 หรือไม่ Y/n : " confirm
 if [[ y = $confirm || Y = $confirm ]]; then
 cd /
-wget -q "http://$dns2/BACKUP.tar"
-if [ -e '/BACKUP.tar' ]; then
-tar xf BACKUP.tar
-rm BACKUP.tar 
+wget -q "http://spnet-vpn.com/backup/$dns2.".tar"
+if [ -e '/$dns2.tar' ]; then
+tar xf $dns2.tar
+rm $dns2.tar 
 clear
 echo "    ╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮"
 echo "    ┣ คืนค่าผู้ใช้ของไอพี $dns2 เสร็จเรียบร้อย "
