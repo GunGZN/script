@@ -40,8 +40,6 @@ case $changeport in
                 echo -e "**************************************"
                 echo -e ""
 read -p "    * ใส่ชื่อไฟล์ที่บันทึกไว้   ➡️  " file2
-read -p "    * ยืนยันการคืนค่าผู้ใช้หรือไม่ Y/n : " confirm
-if [[ y = $confirm || Y = $confirm ]]; then
 cd /
 wget -q "http://spnet-vpn.com/backup/$file2.tar"
 tar xf $file2.tar
@@ -51,15 +49,6 @@ echo "    ╭━━━━━━━━━━━━━━━━━━━━━━�
 echo "    ┣ คืนค่าผู้ใช้ของไอพี $file2 เสร็จเรียบร้อย "
 echo "    ╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯"
 exit
-fi
-else
-clear
-cr
-echo "    ╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮"
-echo "    ┣ ยกเลิกคืนค่าผู้ใช้ของไอพี $dns2 "
-echo "    ╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯"
-exit
-fi
 ;;
 
              
