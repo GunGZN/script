@@ -6,6 +6,7 @@
 # initializing var
 export DEBIAN_FRONTEND=noninteractive
 MYIP=$(wget -qO- icanhazip.com);
+domain=$(cat /etc/v2ray/domain);
 MYIP2="s/xxxxxxxxx-xxxxxxxxx/$MYIP-$MYIP/g";
 NET=$(ip -o $ANU -4 route show to default | awk '{print $5}');
 source /etc/os-release
