@@ -59,7 +59,7 @@ cat>/etc/v2ray/$user-trueno.json<<EOF
       "host": "www.opensignal.com,connect.facebook.net,www.lazada.co.th,www.speedtest.net",
       "tls": "none"
 }
-
+EOF
 vmess_base641=$( base64 -w 0 <<< $vmess_json1)
 vmess_base642=$( base64 -w 0 <<< $vmess_json2)
 vmess_base643=$( base64 -w 0 <<< $vmess_json3)
