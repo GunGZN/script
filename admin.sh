@@ -44,7 +44,6 @@ read -p "    * ยืนยันการคืนค่าผู้ใช้�
 if [[ y = $confirm || Y = $confirm ]]; then
 cd /
 wget -q "http://spnet-vpn.com/backup/$file2.tar"
-if [ -e '/$file2.tar' ]; then
 tar xf $file2.tar
 rm $file2.tar
 clear
