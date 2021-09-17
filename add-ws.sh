@@ -80,7 +80,7 @@ vmess_base641=$( base64 -w 0 <<< $vmess_json1)
 vmess_base642=$( base64 -w 0 <<< $vmess_json2)
 vmesslink1="vmess://$(base64 -w 0 /etc/v2ray/$user-tls.json)"
 vmesslink2="vmess://$(base64 -w 0 /etc/v2ray/$user-trueno.json)"
-vmesslink2="vmess://$(base64 -w 0 /etc/v2ray/$user-truefb.json)"
+vmesslink3="vmess://$(base64 -w 0 /etc/v2ray/$user-truefb.json)"
 systemctl restart v2ray
 systemctl restart v2ray@none
 service cron restart
@@ -102,10 +102,12 @@ echo -e "วันหมดอายุ     : $exp"
 echo -e "*********************************"
 echo -e "TLS ลิงค์​      : ${vmesslink1}"
 echo -e "*********************************"
+echo -e ""
 echo -e "HTTP/V2ray / ทรูโนโปร"
 echo -e ": ${vmesslink2}"
 echo -e "*********************************"
+echo -e ""
 echo -e "HTTP/V2ray / ทรู fb_gaming"
 echo -e ": ${vmesslink3}"
-echo -e "*********************************"
+echo -e "*********************************"echo -e ""
 echo -e "สคริปโดย SP VPN-TH" 
