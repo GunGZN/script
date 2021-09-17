@@ -148,7 +148,7 @@ cat> /etc/v2ray/none.json << END
         "network": "tcp",
         "wsSettings": {
           "path": "/v2ray",
-          "headers" "http": {
+          "headers": {
             "Host": "www.opensignal.com"
           }
          },
