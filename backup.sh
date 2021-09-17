@@ -23,8 +23,11 @@ case $changeport in
                 tar cf /home/vps/public_html/BACKUP.tar /etc/passwd /etc/shadow /etc/gshadow /etc/group
                 echo -e ""
                 echo -e "*************************************"
-                echo -e "  แบคอัพข้อมูลสำเร็จ:➡️ $MYIP/BACKUP.tar "
-                echo -e "   คัดลอกลิ้งเพื่อนำไปใส่ในเซิฟใหม่หรือเซิฟเดิม   "
+                echo -e "         ⬇️ แบคอัพข้อมูลสำเร็จ ⬇️  "
+                echo -e ""
+                echo -e "       $MYIP/BACKUP.tar                        "
+                echo -e ""
+                echo -e "         ⬆️ คัดลองลิ้งไปรีสโตร์ ⬆️  "
                 echo -e "*************************************"
                 ;;
                 2)
