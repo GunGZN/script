@@ -45,7 +45,7 @@ cat>/etc/v2ray/$user-tls.json<<EOF
       "tls": "tls"
 }
 EOF
-cat>/etc/v2ray/$user-trueno.json<<EOF
+cat>/etc/v2ray/$user-none.json<<EOF
       {
       "v": "2",
       "ps": "${user}",
@@ -56,14 +56,14 @@ cat>/etc/v2ray/$user-trueno.json<<EOF
       "net": "tcp",
       "path": "/v2ray",
       "type": "http",
-      "host": "www.opensignal.com,connect.facebook.net,www.lazada.co.th,www.speedtest.net",
+      "host": "www.opensignal.com,www.speedtest.net,www.lazada.co.th,connect.facebook.net",
       "tls": "none"
 }
 EOF
 vmess_base641=$( base64 -w 0 <<< $vmess_json1)
 vmess_base642=$( base64 -w 0 <<< $vmess_json2)
 vmesslink1="vmess://$(base64 -w 0 /etc/v2ray/$user-tls.json)"
-vmesslink2="vmess://$(base64 -w 0 /etc/v2ray/$user-non.json)"
+vmesslink2="vmess://$(base64 -w 0 /etc/v2ray/$user-none.json)"
 systemctl restart v2ray
 systemctl restart v2ray@none
 service cron restart
@@ -83,10 +83,10 @@ echo -e "network      : ws"
 echo -e "เส้นทาง        : /v2ray"
 echo -e "วันหมดอายุ     : $exp"
 echo -e "*********************************"
+echo -e ""
 echo -e "TLS ลิงค์​      : ${vmesslink1}"
 echo -e "*********************************"
 echo -e ""
-echo -e "HTTP/V2ray"
-echo -e "             : ${vmesslink2}"
+echo -e "HTTP ลิงก์​     : ${vmesslink2}"
 echo -e "*********************************"
 echo -e "สคริปโดย SP VPN-TH" 
