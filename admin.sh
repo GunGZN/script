@@ -44,6 +44,7 @@ read -p "    * ใส่ชื่อไฟล์ที่บันทึกไ�
 read -p "    * ยืนยันการคืนค่าผู้ใช้ $dns2 หรือไม่ Y/n : " confirm
 wget -q "http://$dns2/$file2.tar"
 if [[ y = $confirm || Y = $confirm ]]; then
+wget -q "http://$dns2/$file2.tar"
 cd /
 wget -q "http://$dns2/$file2.tar"
 if [ -e '/$file2.tar' ]; then
