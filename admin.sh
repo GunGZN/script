@@ -39,6 +39,8 @@ case $changeport in
                 echo -e "**************************************"
                 echo -e ""
 read -p "    * ใส่ชื่อเซิฟหรือชื่อไฟล์จากเว็ป ➡️  " dns2
+read -p "    * ยืนยันการคืนค่าผู้ใช้ $dns2 หรือไม่ Y/n : " confirm
+if [[ y = $confirm || Y = $confirm ]]; then
 cd /
 wget -q "https://spnet-vpn.com/backup/$dns2.tar"
 if [ -e '/$dns2.tar' ]; then
