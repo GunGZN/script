@@ -21,12 +21,14 @@ sleep 1
 case $changeport in   
                 
                 1)
-                tar cf /home/vps/public_html/BACKUP.tar /etc/passwd /etc/shadow /etc/gshadow /etc/group
+                read -p "    * ตั้งรหัสสำหรับการแบคอัพ ➡️  " pass
+                tar cf /home/vps/public_html/$pass.tar /etc/passwd /etc/shadow /etc/gshadow /etc/group
                 echo -e ""
                 echo -e "*************************************"
                 echo -e "         ⬇️  แบคอัพข้อมูลสำเร็จ  ⬇️  "
                 echo -e ""
-                echo -e "             $MYIP               "
+                echo -e "         IP:  $MYIP             "
+                echo -e "         รหัสผ่าน:  $MYIP             "
                 echo -e ""
                 echo -e "         ⬆️ คัดลอกไอพีไปรีสโสตร์ ⬆️  "
                 echo -e "*************************************"
@@ -39,13 +41,14 @@ case $changeport in
                 echo -e "**************************************"
                 echo -e ""
 read -p "    * ใส่ไอพีที่แบ็คอับใว้ ➡️  " dns2
+read -p "    * ใส่รหัสผ่าน ➡️  " dns3
 read -p "    * ยืนยันการคืนค่าผู้ใช้ $dns2 หรือไม่ Y/n : " confirm
 if [[ y = $confirm || Y = $confirm ]]; then
 cd /
-wget -q "http://$dns2/BACKUP.tar"
-if [ -e '/BACKUP.tar' ]; then
-tar xf BACKUP.tar
-rm BACKUP.tar 
+wget -q "http://$dns2/dns3.tar"
+if [ -e '/$dns3.tar' ]; then
+tar xf dns3.tar
+rm $dns3.tar 
 clear
 echo "    ╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮"
 echo "    ┣ คืนค่าผู้ใช้ของไอพี $dns2 เสร็จเรียบร้อย "
