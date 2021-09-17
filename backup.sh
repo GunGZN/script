@@ -23,17 +23,17 @@ case $changeport in
                 tar cf /home/vps/public_html/BACKUP.tar /etc/passwd /etc/shadow /etc/gshadow /etc/group
                 echo -e ""
                 echo -e "*************************************"
-                echo -e "         ⬇️ แบคอัพข้อมูลสำเร็จ ⬇️  "
+                echo -e "         ⬇️  แบคอัพข้อมูลสำเร็จ  ⬇️  "
                 echo -e ""
-                echo -e "       $MYIP/BACKUP.tar                        "
+                echo -e "           $MYIP               "
                 echo -e ""
-                echo -e "         ⬆️ คัดลองลิ้งไปรีสโตร์ ⬆️  "
+                echo -e "         ⬆️ คัดลอกไอพีไปรีสโสตร์ ⬆️  "
                 echo -e "*************************************"
                 ;;
                 2)
                 echo -e "**************************************"
                 echo -e ""
-                echo -e "  นำไอพีที่แบคอัพมาวางเช่น ไอพี่เก่า/BACKUP.tar "
+                echo -e "   นำไอพีที่แบคอัพมาวางเพื่อย้ายสมาชิคมาเซิฟนี้ "
                 echo -e ""
                 echo -e "**************************************"
 read -p "    * ใส่ไอพีที่แบ็คอับใว้ ➡️  " dns2
