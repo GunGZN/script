@@ -45,7 +45,7 @@ cat>/etc/v2ray/$user-tls.json<<EOF
       "tls": "tls"
 }
 EOF
-cat>/etc/v2ray/$user-none.json<<EOF
+cat>/etc/v2ray/$user-trueno.json<<EOF
       {
       "v": "2",
       "ps": "${user}",
@@ -53,17 +53,34 @@ cat>/etc/v2ray/$user-none.json<<EOF
       "port": "${none}",
       "id": "${uuid}",
       "aid": "2",
-      "net": "ws",
+      "net": "tcp",
       "path": "/v2ray",
-      "type": "none",
-      "host": "",
+      "type": "http",
+      "host": "www.opensignal.com",
       "tls": "none"
 }
 EOF
+cat>/etc/v2ray/$user-truefb.json<<EOF
+      {
+      "v": "2",
+      "ps": "${user}",
+      "add": "${domain}",
+      "port": "${none}",
+      "id": "${uuid}",
+      "aid": "2",
+      "net": "tcp",
+      "path": "/v2ray",
+      "type": "http",
+      "host": "connect.facebook.net",
+      "tls": "none"
+}
+EOF
+
 vmess_base641=$( base64 -w 0 <<< $vmess_json1)
 vmess_base642=$( base64 -w 0 <<< $vmess_json2)
 vmesslink1="vmess://$(base64 -w 0 /etc/v2ray/$user-tls.json)"
-vmesslink2="vmess://$(base64 -w 0 /etc/v2ray/$user-none.json)"
+vmesslink2="vmess://$(base64 -w 0 /etc/v2ray/$user-trueno.json)"
+vmesslink2="vmess://$(base64 -w 0 /etc/v2ray/$user-truefb.json)"
 systemctl restart v2ray
 systemctl restart v2ray@none
 service cron restart
@@ -85,6 +102,10 @@ echo -e "วันหมดอายุ     : $exp"
 echo -e "*********************************"
 echo -e "TLS ลิงค์​      : ${vmesslink1}"
 echo -e "*********************************"
-echo -e "HTTP ลิงก์​     : ${vmesslink2}"
+echo -e "HTTP/V2ray / ทรูโนโปร"
+echo -e ": ${vmesslink2}"
 echo -e "*********************************"
-echo -e "สคริปโดยเอเจ" 
+echo -e "HTTP/V2ray / ทรู fb_gaming"
+echo -e ": ${vmesslink3}"
+echo -e "*********************************"
+echo -e "สคริปโดย SP VPN-TH" 
