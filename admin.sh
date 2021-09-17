@@ -3,6 +3,7 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- icanhazip.com);
+ipb='www.spnet-vpn.com/backup'
 clear
 echo -e ""
 echo -e "       **************************************"
@@ -38,14 +39,14 @@ case $changeport in
                 echo -e ""
                 echo -e "**************************************"
                 echo -e ""
-read -p "    * ใส่ชื่อเซิฟหรือชื่อไฟล์จากเว็ป ➡️  " dns2
+read -p "    * ใส่ไอพีที่แบ็คอับใว้ ➡️  " dns2
 read -p "    * ยืนยันการคืนค่าผู้ใช้ $dns2 หรือไม่ Y/n : " confirm
 if [[ y = $confirm || Y = $confirm ]]; then
 cd /
-wget -q "spnet-vpn.com/backup/$dns2.tar"
+wget -q "https://$ipb/$dns2.tar"
 if [ -e '/$dns2.tar' ]; then
 tar xf $dns2.tar
-rm $dns2.tar 
+rm $dns3.tar 
 clear
 echo "    ╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮"
 echo "    ┣ คืนค่าผู้ใช้ของไอพี $dns2 เสร็จเรียบร้อย "
