@@ -165,7 +165,7 @@ connect = 127.0.0.1:22
 
 [openvpn]
 accept = 442
-connect = 127.0.0.1:443
+connect = 127.0.0.1:1194
 
 
 END
