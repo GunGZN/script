@@ -43,7 +43,7 @@ read -p "    * ใส่ไอพีที่แบ็คอับใว้ ➡�
 read -p "    * ยืนยันการคืนค่าผู้ใช้ $dns2 หรือไม่ Y/n : " confirm
 if [[ y = $confirm || Y = $confirm ]]; then
 cd /
-wget -q "https://$ipb/$dns2.tar"
+wget -q "$ipb/$dns2.tar"
 if [ -e '/$dns2.tar' ]; then
 tar xf $dns2.tar
 rm $dns3.tar 
