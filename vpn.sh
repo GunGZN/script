@@ -291,6 +291,46 @@ cd
 # pada tulisan xxx ganti dengan alamat ip address VPS anda 
 /etc/init.d/openvpn restart
 
+
+# masukkan certificatenya ke dalam config client TCP 1194
+echo '<ca>' >> /etc/openvpn/true-nopro.ovpn
+cat /etc/openvpn/server/ca.crt >> /etc/openvpn/true-nopro.ovpn
+echo '</ca>' >> /etc/openvpn/true-nopro.ovpn
+# Copy config OpenVPN client ke home directory root agar mudah didownload ( TCP 1194 )
+cp /etc/openvpn/true-nopro.ovpn /home/vps/public_html/true-nopro.ovpn
+
+# masukkan certificatenya ke dalam config client TCP 1194
+echo '<ca>' >> /etc/openvpn/true-fbgaming.ovpn
+cat /etc/openvpn/server/ca.crt >> /etc/openvpn/true-fbgaming.ovpn
+echo '</ca>' >> /etc/openvpn/true-fbgaming.ovpn
+# Copy config OpenVPN client ke home directory root agar mudah didownload ( TCP 1194 )
+cp /etc/openvpn/true-fbgaming.ovpn /home/vps/public_html/true-fbgaming.ovpn
+
+
+# masukkan certificatenya ke dalam config client TCP 1194
+echo '<ca>' >> /etc/openvpn/dtac-lazada.ovpn
+cat /etc/openvpn/server/ca.crt >> /etc/openvpn/dtac-lazada.ovpn
+echo '</ca>' >> /etc/openvpn/dtac-lazada.ovpn
+# Copy config OpenVPN client ke home directory root agar mudah didownload ( TCP 1194 )
+cp /etc/openvpn/dtac-lazada.ovpn /home/vps/public_html/dtac-lazada.ovpn
+
+
+# masukkan certificatenya ke dalam config client TCP 1194
+echo '<ca>' >> /etc/openvpn/dtac-line.ovpn
+cat /etc/openvpn/server/ca.crt >> /etc/openvpn/dtac-line.ovpn
+echo '</ca>' >> /etc/openvpn/dtac-line.ovpn
+# Copy config OpenVPN client ke home directory root agar mudah didownload ( TCP 1194 )
+cp /etc/openvpn/dtac-line.ovpn /home/vps/public_html/dtac-line.ovpn
+
+
+# masukkan certificatenya ke dalam config client TCP 1194
+echo '<ca>' >> /etc/openvpn/ais-aisplay.ovpn
+cat /etc/openvpn/server/ca.crt >> /etc/openvpn/ais-aisplay.ovpn
+echo '</ca>' >> /etc/openvpn/ais-aisplay.ovpn
+# Copy config OpenVPN client ke home directory root agar mudah didownload ( TCP 1194 )
+cp /etc/openvpn/ais-aisplay.ovpn /home/vps/public_html/ais-aisplay.ovpn
+
+
 # masukkan certificatenya ke dalam config client TCP 1194
 echo '<ca>' >> /etc/openvpn/TCP.ovpn
 cat /etc/openvpn/server/ca.crt >> /etc/openvpn/TCP.ovpn
