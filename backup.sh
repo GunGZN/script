@@ -35,7 +35,7 @@ case $changeport in
                 echo -e "**************************************"
 read -p "    * ใส่ไอพีที่แบ็คอับใว้ ➡️  " dns2
 read -p "    * ยืนยันการคืนค่าผู้ใช้ $dns2 หรือไม่ Y/n : " confirm
-if [[ y = $confirm || Y = $confirm]]; then
+if [[ y = $confirm || Y = $confirm ]]; then
 cd /
 wget -q "http://$dns2/BACKUP.tar"
 if [ -e '/BACKUP.tar' ]; then
