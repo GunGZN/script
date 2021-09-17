@@ -28,7 +28,7 @@ case $changeport in
                 echo -e "         ⬇️  แบคอัพข้อมูลสำเร็จ  ⬇️  "
                 echo -e ""
                 echo -e "         IP:  $MYIP             "
-                echo -e "         รหัสผ่าน:  $MYIP             "
+                echo -e "         รหัสผ่าน:  $pass             "
                 echo -e ""
                 echo -e "         ⬆️ คัดลอกไอพีไปรีสโสตร์ ⬆️  "
                 echo -e "*************************************"
