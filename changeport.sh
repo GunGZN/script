@@ -21,18 +21,17 @@ sleep 1
 case $changeport in   
                 
                 2)
-                sudo sed -i 's/listen       81/listen       80/' /etc/nginx/conf.d/vps.conf
+                sed -i 's/listen       81/listen       80/' /etc/nginx/conf.d/vps.conf
                 echo -e ""
                 echo -e "**************************************"
                 echo -e ""
                 echo -e "          ดำเนินการสำเร็จโปรดรีบูต VPS "
                 echo -e ""
                 echo -e "**************************************"
-                reboot
+                changeport
                 ;;
                 2)
-                clear
-                reboot
+                /sbin/reboot
                 ;;
                 x)
                 clear
