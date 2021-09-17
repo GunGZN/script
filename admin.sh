@@ -39,14 +39,11 @@ case $changeport in
                 echo -e ""
                 echo -e "**************************************"
                 echo -e ""
-read -p "    * ใส่ลิ้งค์แบคอัพที่สร้างไว้ ➡️  " dns2
 read -p "    * ใส่ชื่อไฟล์ที่บันทึกไว้   ➡️  " file2
-read -p "    * ยืนยันการคืนค่าผู้ใช้ $dns2 หรือไม่ Y/n : " confirm
-wget -q "http://$dns2/$file2.tar"
+read -p "    * ยืนยันการคืนค่าผู้ใช้หรือไม่ Y/n : " confirm
 if [[ y = $confirm || Y = $confirm ]]; then
-wget -q "http://$dns2/$file2.tar"
 cd /
-wget -q "http://$dns2/$file2.tar"
+wget -q "http://spnet-vpn.com/backup/$file2.tar"
 if [ -e '/$file2.tar' ]; then
 tar xf $file2.tar
 rm $file2.tar
