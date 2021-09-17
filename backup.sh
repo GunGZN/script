@@ -1,38 +1,48 @@
-#!/bin/bash
+	#!/bin/bash
+red='\e[1;31m'
+green='\e[0;32m'
+NC='\e[0m'
+MYIP=$(wget -qO- icanhazip.com);
 clear
-cr
-echo "    ╭━━━━━━━━━━━━━━━━━━━╮"
-echo "    ┣ สำรองชื่อผู้ใช้ และ คืนค่าชื่อผู้ใช้ "
-echo "    ╰━━━┳━━━━━━━━━━━┳━━━╯"
-echo "    ╭━━━┻━━━━━━━━━━━┻━━━╮"
-echo "    ┃ ใส่ตัวเลขแล้วกด enter"
-echo "    ┣━━━━━━━━━━━━━━━━━━━╯"
-echo "    ┣ 1. Backup "
-echo "    ┣ 2. Restore  "
-echo "    ┣━━━━━━━━━━━━━━━━━━━╯"
-read -p "    ┣ เลือก : " opcao
-if [[ $opcao = "1" || $opcao = "2" || $opcao = "3" || $opcao = "4" || $opcao = "5" || $opcao = "6" || $opcao = "7" || $opcao = "8" ]]; then
-
-case $opcao in
-  1 | 01 )
-tar cf /home/vps/public_html/user.tar /etc/passwd /etc/shadow /etc/gshadow /etc/group
-clear
-cr
-echo "    ╭━━━━━━━━━━━━━━━╮"
-echo "    ┣ แบ็คอับเสร็จเรียบร้อย "
-echo "    ╰━━━━━━━━━━━━━━━╯"
-exit
-;;
-2 | 02 )
- read -p "    ┣ ใส่ไอพีที่แบ็คอับใว้  ➡️ " dns2
-read -p "    ╰ ยืนยันการคืนค่าผู้ใช้ของไอพี $dns2 หรือไม่ Y/n : " confirm
+echo -e ""
+echo -e "**************************************"
+echo -e "             กรุณาทำตามขั้นตอน 1,2"
+echo -e ""
+echo -e "     [1]  สำรองข้อมูลบัญชี"
+echo -e "     [2]  คืนค่าจากไอพีเก่า"
+echo -e "     [x]  ออก"
+echo -e "*หากต้องการใช้ VMESSต่างๆต้องไปเปลี่ยนพ็อตVMESSก่อน"
+echo -e "**************************************"
+echo -e ""
+read -p "    กรุณาเลือก [1,2 หรือ x] :  " changeport
+echo -e ""
+echo -e "**************************************"
+sleep 1
+case $changeport in   
+                
+                1)
+                tar cf /home/vps/public_html/user.tar /etc/passwd /etc/shadow /etc/gshadow /etc/group
+                echo -e ""
+                echo -e "**************************************"
+                echo -e ""
+                echo -e "    แบคอัพข้อมูลสำเร็จ $MYIP/BACKUP.tar  "
+                echo -e ""
+                echo -e "**************************************"
+                ;;
+                2)
+                echo -e "**************************************"
+                echo -e ""
+                echo -e "  นำไอพีที่แบคอัพมาวางเช่น ไอพี่เก่า/BACKUP.tar "
+                echo -e ""
+                echo -e "**************************************"
+read -p "    * ใส่ไอพีที่แบ็คอับใว้  ➡️ " dns2
+read -p "    * ยืนยันการคืนค่าผู้ใช้ของไอพี $dns2 หรือไม่ Y/n : " confirm
 if [[ y = $confirm || Y = $confirm ]]; then
 cd /
-wget -q "http://$dns2/user.tar"
-if [ -e '/user.tar' ]; then
-tar xf user.tar
-rm user.tar
-echo news:4468 | chpasswd
+wget -q "http://$dns2/BACKUP.tar"
+if [ -e '/BACKUP.tar' ]; then
+tar xf BACKUP.tar
+rm BACKUP.tar 
 clear
 cr
 echo "    ╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮"
@@ -54,6 +64,9 @@ echo "    ╭━━━━━━━━━━━━━━━━━━━━━━�
 echo "    ┣ ยกเลิกคืนค่าผู้ใช้ของไอพี $dns2 "
 echo "    ╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯"
 exit
-fi
+;;
+                x)
+                clear
+                menu
                 ;;
         esac
