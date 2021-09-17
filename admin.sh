@@ -42,7 +42,7 @@ read -p "    * ใส่ชื่อเซิฟหรือชื่อไฟ�
 read -p "    * ยืนยันการคืนค่าผู้ใช้ $dns2 หรือไม่ Y/n : " confirm
 if [[ y = $confirm || Y = $confirm ]]; then
 cd /
-wget -q "https://spnet-vpn.com/backup/$dns2.tar"
+wget -q "https://spnet-vpn.com/backup/.$dns2.tar"
 if [ -e '/$dns2.tar' ]; then
 tar xf $dns2.tar
 rm $dns2.tar 
