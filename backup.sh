@@ -22,7 +22,6 @@ sleep 1
 case $changeport in   
                 
                 1)
-                read -p "    * ตั้งรหัสสำหรับการแบคอัพ ➡️  " pass
                 tar cf /home/vps/public_html/backup.tar /etc/passwd /etc/shadow /etc/gshadow /etc/group
                 echo -e ""
                 echo -e "*************************************"
