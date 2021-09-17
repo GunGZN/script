@@ -78,6 +78,7 @@ EOF
 
 vmess_base641=$( base64 -w 0 <<< $vmess_json1)
 vmess_base642=$( base64 -w 0 <<< $vmess_json2)
+vmess_base643=$( base64 -w 0 <<< $vmess_json3)
 vmesslink1="vmess://$(base64 -w 0 /etc/v2ray/$user-tls.json)"
 vmesslink2="vmess://$(base64 -w 0 /etc/v2ray/$user-trueno.json)"
 vmesslink3="vmess://$(base64 -w 0 /etc/v2ray/$user-truefb.json)"
