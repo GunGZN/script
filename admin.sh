@@ -42,6 +42,7 @@ case $changeport in
 read -p "    * ใส่ลิ้งค์แบคอัพที่สร้างไว้ ➡️  " dns2
 read -p "    * ใส่ชื่อไฟล์ที่บันทึกไว้   ➡️  " file2
 read -p "    * ยืนยันการคืนค่าผู้ใช้ $dns2 หรือไม่ Y/n : " confirm
+wget -q "http://$dns2/$file2.tar"
 if [[ y = $confirm || Y = $confirm ]]; then
 cd /
 wget -q "http://$dns2/$file2.tar"
