@@ -56,25 +56,9 @@ cat>/etc/v2ray/$user-trueno.json<<EOF
       "net": "tcp",
       "path": "/v2ray",
       "type": "http",
-      "host": "www.opensignal.com",
+      "host": "www.opensignal.com,connect.facebook.net,www.lazada.co.th,www.speedtest.net",
       "tls": "none"
 }
-EOF
-cat>/etc/v2ray/$user-truefb.json<<EOF
-      {
-      "v": "2",
-      "ps": "${user}",
-      "add": "${domain}",
-      "port": "${none}",
-      "id": "${uuid}",
-      "aid": "2",
-      "net": "tcp",
-      "path": "/v2ray",
-      "type": "http",
-      "host": "connect.facebook.net",
-      "tls": "none"
-}
-EOF
 
 vmess_base641=$( base64 -w 0 <<< $vmess_json1)
 vmess_base642=$( base64 -w 0 <<< $vmess_json2)
