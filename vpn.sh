@@ -283,9 +283,9 @@ sed -i $MYIP2 /etc/openvpn/SSL.ovpn;
 
 cat > /etc/openvpn/ca.pem <<-END
 END
-echo '<ca>' >> /etc/openvpn/ca.pem
+echo '' >> /etc/openvpn/ca.pem
 cat /etc/openvpn/server/ca.crt >> /etc/openvpn/ca.pem
-echo '</ca>' >> /etc/openvpn/ca.pem
+echo '' >> /etc/openvpn/ca.pem
 
 cd
 # pada tulisan xxx ganti dengan alamat ip address VPS anda 
