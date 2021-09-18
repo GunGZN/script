@@ -1,7 +1,8 @@
-cd
-apt -y install squid3
-wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/Bankzza555666/script/main/squid3.conf"
-sed -i $MYIP2 /etc/squid/squid.con
+cat > /etc/openvpn/ca.pem <<-END
+END
+echo '' >> /etc/openvpn/ca.pem
+cat /etc/openvpn/server/ca.crt >> /etc/openvpn/ca.pem
+echo '' >> /etc/openvpn/ca.pem
 
 
 # download script
