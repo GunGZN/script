@@ -260,35 +260,101 @@ apt -y install dos2unix
 
 # download script
 cd /usr/bin
-wget -O 10 "https://raw.githubusercontent.com/Bankzza555666/script/main/add-ws.sh"
-wget -O 18 "https://raw.githubusercontent.com/Bankzza555666/script/main/add-vless.sh"
-wget -O 14 "https://raw.githubusercontent.com/Bankzza555666/script/main/add-tr.sh"
-wget -O 19 "https://raw.githubusercontent.com/Bankzza555666/script/main/del-ws.sh"
-wget -O 11 "https://raw.githubusercontent.com/Bankzza555666/script/main/del-vless.sh"
-wget -O 15 "https://raw.githubusercontent.com/Bankzza555666/script/main/del-tr.sh"
-wget -O 12 "https://raw.githubusercontent.com/Bankzza555666/script/main/cek-ws.sh"
-wget -O 20 "https://raw.githubusercontent.com/Bankzza555666/script/main/cek-vless.sh"
-wget -O 16 "https://raw.githubusercontent.com/Bankzza555666/script/main/cek-tr.sh"
-wget -O 13 "https://raw.githubusercontent.com/Bankzza555666/script/main/renew-ws.sh"
-wget -O 21 "https://raw.githubusercontent.com/Bankzza555666/script/main/renew-vless.sh"
-wget -O 17 "https://raw.githubusercontent.com/Bankzza555666/script/main/renew-tr.sh"
-wget -O cert "https://raw.githubusercontent.com/Bankzza555666/script/main/cert.sh"
-chmod +x 10
-chmod +x 18
-chmod +x 14
-chmod +x 11
-chmod +x 19
-chmod +x 15
-chmod +x 12
-chmod +x 20
-chmod +x 16
-chmod +x 13
-chmod +x 21
-chmod +x 17
-chmod +x cert
+wget -O m "https://raw.githubusercontent.com/Bankzza555666/script/main/menu.sh"
+wget -O menu "https://raw.githubusercontent.com/Bankzza555666/script/main/menu.sh"
+wget -O 1 "https://raw.githubusercontent.com/Bankzza555666/script/main/usernew.sh"
+wget -O 6 "https://raw.githubusercontent.com/Bankzza555666/script/main/hapus.sh"
+wget -O 5 "https://raw.githubusercontent.com/Bankzza555666/script/main//member.sh"
+wget -O 3 "https://raw.githubusercontent.com/Bankzza555666/script/main/delete.sh"
+wget -O 4 "https://raw.githubusercontent.com/Bankzza555666/script/main/cek.sh"
+wget -O 9 "https://raw.githubusercontent.com/Bankzza555666/script/main/restart.sh"
+wget -O speedtest "https://raw.githubusercontent.com/Bankzza555666/script/main/speedtest_cli.py"
+wget -O info "https://raw.githubusercontent.com/Bankzza555666/script/main/info.sh"
+wget -O ram "https://raw.githubusercontent.com/Bankzza555666/script/main/ram.sh"
+wget -O 2 "https://raw.githubusercontent.com/Bankzza555666/script/main/renew.sh"
+wget -O 7 "https://raw.githubusercontent.com/Bankzza555666/script/main/autokill.sh"
+wget -O 8 "https://raw.githubusercontent.com/Bankzza555666/script/main/ceklim.sh"
+wget -O tendang "https://raw.githubusercontent.com/Bankzza555666/script/main/tendang.sh"
+wget -O clear-log "https://raw.githubusercontent.com/Bankzza555666/script/main/clear-log.sh"
+wget -O port "https://raw.githubusercontent.com/Bankzza555666/script/main/change.sh"
+wget -O port-ovpn "https://raw.githubusercontent.com/Bankzza555666/script/main/port-ovpn.sh"
+wget -O port-ssl "https://raw.githubusercontent.com/Bankzza555666/script/main/port-ssl.sh"
+wget -O port-tr "https://raw.githubusercontent.com/Bankzza555666/script/main/port-tr.sh"
+wget -O port-squid "https://raw.githubusercontent.com/Bankzza555666/script/main/port-squid.sh"
+wget -O port-ws "https://raw.githubusercontent.com/Bankzza555666/script/main/port-ws.sh"
+wget -O port-vless "https://raw.githubusercontent.com/Bankzza555666/script/main/port-vless.sh"
+wget -O web "https://raw.githubusercontent.com/Bankzza555666/script/main/webmin.sh"
+wget -O rootpass "https://raw.githubusercontent.com/Bankzza555666/script/main/rootpass.sh"
+wget -O changeport "https://raw.githubusercontent.com/Bankzza555666/script/main/changeport.sh"
+wget -O up "https://raw.githubusercontent.com/Bankzza555666/script/main/up.sh"
+wget -O backup "https://raw.githubusercontent.com/Bankzza555666/script/main/backup.sh"
+chmod +x backup
+chmod +x up
+chmod +x m
+chmod +x menu
+chmod +x 1
+chmod +x 6
+chmod +x 5
+chmod +x 3
+chmod +x 4
+chmod +x 9
+chmod +x speedtest
+chmod +x info
+chmod +x 7
+chmod +x tendang
+chmod +x 8
+chmod +x ram
+chmod +x 2
+chmod +x clear-log
+chmod +x port
+chmod +x port-ovpn
+chmod +x port-ssl
+chmod +x port-tr
+chmod +x port-squid
+chmod +x port-ws
+chmod +x port-vless
+chmod +x web
+chmod +x rootpass
+chmod +x changeport
+echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
+echo "0 0 * * * root xp" >> /etc/crontab
+# remove unnecessary files
 cd
-rm -f ins-vt.sh
-mv /root/domain /etc/v2ray
+apt autoclean -y
+apt -y remove --purge unscd
+apt-get -y --purge remove samba*;
+apt-get -y --purge remove apache2*;
+apt-get -y --purge remove bind9*;
+apt-get -y remove sendmail*
+apt autoremove -y
+# finishing
+cd
+chown -R www-data:www-data /home/vps/public_html
+/etc/init.d/nginx restart
+/etc/init.d/openvpn restart
+/etc/init.d/cron restart
+/etc/init.d/ssh restart
+/etc/init.d/dropbear restart
+/etc/init.d/fail2ban restart
+/etc/init.d/stunnel4 restart
+/etc/init.d/vnstat restart
+/etc/init.d/squid restart
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 500
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7400 --max-clients 500
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7500 --max-clients 500
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7600 --max-clients 500
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7700 --max-clients 500
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7800 --max-clients 500
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7900 --max-clients 500
+history -c
+echo "unset HISTFILE" >> /etc/profile
+
+cd
+rm -f /root/key.pem
+rm -f /root/cert.pem
+rm -f /root/ssh-vpn.sh
 
 # finihsing
 clear
