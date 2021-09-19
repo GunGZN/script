@@ -29,11 +29,21 @@
 - V2RAY Vless TLS         : 2083
 - V2RAY Vless None TLS    : 8880
 - Trojan                  : 2443
-- Owner                   : SP VPN-TH
-- LINE                    : Bankisss
+- Owner                   : เอเจ
+- LINE                    : aj07
 
 
 ซัพพอร์ต​
 
 Debian 9 & 10
 Ubuntu 18 & 20
+
+ขอขอบคุณ
+โฮส
+เซย์
+เคนนี่
+อัยมาน
+และทุกๆคน
+
+มีปัญหา​แจ้งผมได้
+0934567688

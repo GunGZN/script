@@ -26,7 +26,7 @@ echo -e "    จำนวนวันที่เพิ่ม    :  $Days วั
 echo -e "    วันหมดอายุ      :  $Expiration_Display" 
 echo -e ""
 echo -e "****************************************"
-echo -e "สคริปโดย sp vpn-th" 
+echo -e "สคริปโดยเอเจ" 
 else
 clear
 echo -e ""

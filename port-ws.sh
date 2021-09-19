@@ -7,7 +7,7 @@ clear
 tls="$(cat ~/log-install.txt | grep -w "Vmess TLS" | cut -d: -f2|sed 's/ //g')"
 none="$(cat ~/log-install.txt | grep -w "Vmess None TLS" | cut -d: -f2|sed 's/ //g')"
 echo -e "***************************************"
-echo -e "              สคริปโดยเอเจ"​
+echo -e "       CRIP_BY_SPVPN-TH"​
 echo -e ""
 echo -e "     [1]  เปลี่ยนพอร์ต Vmess TLS $tls"
 echo -e "     [2]  เปลี่ยนพอร์ต Vmess None TLS $none"
