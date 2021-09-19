@@ -21,7 +21,7 @@ commonname=jAvaNet
 email=sydjaja007@gmail.com
 
 # simple password minimal
-wget -O /etc/pam.d/common-password "https://github.com/wehoi/ws/raw/main/password"
+wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/Bankzza555666/script/main/password"
 chmod +x /etc/pam.d/common-password
 
 
@@ -93,7 +93,7 @@ wget -O /etc/nginx/conf.d/vps.conf "https://github.com/javakeisha/my/raw/main/vp
 
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "https://github.com/wehoi/ws/raw/main/badvpn-udpgw64"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/Bankzza555666/script/main/badvpn-udpgw64"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -184,7 +184,7 @@ apt-get install sslh -y
 
 #konfigurasi
 #port 443 to 77 and 777
-wget -O /etc/default/sslh "https://github.com/wehoi/ws/raw/main/sslh.conf"
+wget -O /etc/default/sslh "https://raw.githubusercontent.com/Bankzza555666/script/main/sslh.conf"
 service sslh restart
 
 
@@ -199,7 +199,7 @@ sudo make install
 END
 
 #OpenVPN
-wget https://github.com/wehoi/ws/raw/main/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
+wget https://raw.githubusercontent.com/Bankzza555666/script/main/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 
 # install fail2ban
 apt -y install fail2ban
